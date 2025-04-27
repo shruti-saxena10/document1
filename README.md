@@ -39,7 +39,17 @@ Production: Connect to GCP Pub/Sub.
           
 
 
-## Installation
+## Product Entity
+| Field | Type | Description |
+| :---- | :--: | ---------: |
+| productId | UUID | Unique product identifier |
+| name | String | Product name |
+| description | String | Product description |
+| category | String | Product category |
+| price | BigDecimal | Product price |
+| availableStock | Integer | Available stock quantity |
+| lastUpdated | Timestamp | Last updated timestamp |
+
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
