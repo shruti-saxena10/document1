@@ -50,6 +50,12 @@ Production: Connect to GCP Pub/Sub.
 | availableStock | Integer | Available stock quantity |
 | lastUpdated | Timestamp | Last updated timestamp |
 
+## Event-Driven Design
+1. On create/update:
+
+## Cloud & Deployment
+1. Dockerize the application and prepare for deployment on Cloud Run.
+
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
