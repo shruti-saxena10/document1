@@ -116,9 +116,14 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-'''
+```
 
 Also add PostgreSQL driver dependency in your pom.xml:
+
+Pub/Sub setup (mock or emulator)
+API usage examples (curl/Postman)
+(Bonus) Dockerfile and sample docker-compose.yml
+(Bonus) Unit tests (JUnit + Mockito)
 
 Please make sure to update tests as appropriate.
 
