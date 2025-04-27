@@ -84,13 +84,41 @@ Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 
-Setup
+## Setup instructions (local DB)
 ```
 brew install postgresql
 brew services start postgresql
+# Switch to postgres user
+sudo -i -u postgres
+# Open PostgreSQL prompt
+psql
+# Create a new database
+CREATE DATABASE your_database_name;
+# Create a new user with a password
+CREATE USER your_username WITH PASSWORD 'your_password';
+# Grant privileges to the user
+GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_username;
 ```
+## For connecting a Spring Boot app to PostgreSQL
+application.yml
+```
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/database_name
+    username: your_username
+    password: your_password
+    driver-class-name: org.postgresql.Driver
 
+  jpa:
+    hibernate:
+      ddl-auto: update  # Or validate / create / create-drop based on your needs
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+'''
 
+Also add PostgreSQL driver dependency in your pom.xml:
 
 Please make sure to update tests as appropriate.
 
