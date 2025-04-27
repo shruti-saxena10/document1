@@ -29,12 +29,13 @@ Local dev: Use RabbitMQ for event messaging.
 Production: Connect to GCP Pub/Sub.
 
 ## API Endpoints
-| Item              | In Stock | Price |
-| :---------------- | :------: | ----: |
-| Python Hat        |   True   | 23.99 |
-| SQL Hat           |   True   | 23.99 |
-| Codecademy Tee    |  False   | 19.99 |
-| Codecademy Hoodie |  False   | 42.99 |
+| Method | Endpoint | Description |
+| :----- | :------: | ----------: |
+| POST   | /products | Add a new product |
+| PUT | /products/{id} | Update an existing product |
+| GET | /products | List all products |
+| GET | /products/{id} | Get product by ID |
+
           
 
 
